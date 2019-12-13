@@ -111,10 +111,10 @@ def find_words_from_preds(tokens, preds) -> List[str]:
         if p == 0:
             curr_word = curr_word + s
         else:
-            words.append(curr_word)
+            words.append(curr_word,p)
             curr_word = s
 
-    words.append(curr_word)
+    words.append(curr_word,preds[0])
 
     return words
 
